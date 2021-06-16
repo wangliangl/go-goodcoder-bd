@@ -3,10 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"gopkg.in/yaml.v2"
 	"icode.baidu.com/baidu/go-lib/log"
 	"icode.baidu.com/baidu/go-lib/log/log4go"
-	"io/ioutil"
 	"mini_spider/util"
 )
 
@@ -21,7 +19,7 @@ const (
 	//       "H", hour
 	//       "D", day
 	//       "MIDNIGHT", roll over at midnight
-	logWhen = "MIDNIGHT"
+	logWhen = "D"
 	//       backupCount: If backupCount is > 0, when rollover is done, no more than
 	logBackUp = 0
 )
@@ -65,21 +63,11 @@ func main() {
 	}
 
 	// init script config
-	conf := new(util.MiniSpider)
-	confFile, err := ioutil.ReadFile(*confPath)
+	conf, err := util.LoadConfig(*confPath)
 	if err != nil {
-		_ = log.Logger.Error("load config path err:%s", err.Error())
-		return
-
-	}
-
-	fmt.Println("spider conf:", string(confFile))
-	err = yaml.Unmarshal(confFile, conf)
-	if err != nil {
-		fmt.Println(err)
-		_ = log.Logger.Error("unmarshal spider conf err:%s", err.Error())
+		_ = log.Logger.Error("load config err:%s", err.Error())
 		return
 	}
-	fmt.Println(string(conf.OutputDirectory))
+	fmt.Println(conf.Spider)
 
 }
