@@ -5,6 +5,9 @@ import (
 	"fmt"
 	"icode.baidu.com/baidu/go-lib/log"
 	"icode.baidu.com/baidu/go-lib/log/log4go"
+	"mini_spider/core/engine"
+	"mini_spider/core/parser"
+	"mini_spider/core/scheduler"
 	"mini_spider/util"
 )
 
@@ -70,7 +73,14 @@ func main() {
 	}
 	fmt.Println(conf.Spider)
 
-	// log url data
+	e := engine.ConcurrentEngine{
+		Scheduler:   &scheduler.SimpleScheduler{},
+		WorkerCount: conf.Spider.ThreadCount,
+	}
 
+	e.Run(engine.Request{
+		Url:        conf.Spider.UrlListFile,
+		ParserFunc: parser.ParseBaiduHost,
+	})
 
 }

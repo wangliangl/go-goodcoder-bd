@@ -1,19 +1,17 @@
 package engine
 
-import (
-	"log"
-	"mini_spider/core/fetcher"
-)
+
+type Scheduler interface {
+	Submit(Request)
+	ConfigureMasterWorkerChan(chan Request)
+}
+
 
 type ConcurrentEngine struct {
 	Scheduler   Scheduler
 	WorkerCount int
 }
 
-type Scheduler interface {
-	Submit(Request)
-	ConfigureMasterWorkerChan(chan Request)
-}
 
 func (e *ConcurrentEngine) Run(seeds ...Request) {
 
