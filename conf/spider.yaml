@@ -4,4 +4,5 @@ spider:
   maxDepth: 1
   crawlInterval: 1
   crawlTimeout: 1
+  targetUrl: .*.(htm|html)$
   threadCount: 8

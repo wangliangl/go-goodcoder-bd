@@ -25,7 +25,7 @@ const (
 )
 
 var (
-	confPath *string = flag.String("c", "conf/spider.yaml", "mini_spider configure path")
+	confPath *string = flag.String("c", "conf/spider.yaml", "mini spider configure path")
 	help     *bool   = flag.Bool("h", false, "show help")
 	logPath  *string = flag.String("l", "log", "dir path of log")
 	stdout   *bool   = flag.Bool("s", false, "show log in stdout")
@@ -69,5 +69,8 @@ func main() {
 		return
 	}
 	fmt.Println(conf.Spider)
+
+	// log url data
+
 
 }

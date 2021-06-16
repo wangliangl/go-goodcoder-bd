@@ -16,9 +16,9 @@ type SpiderConf struct {
 	MaxDepth        int    `yaml:"maxDepth"`
 	CrawlInterval   int    `yaml:"crawlInterval"`
 	CrawlTimeout    int    `yaml:"crawlTimeout"`
+	TargetUrl       string `yaml:"targetUrl"`
 	ThreadCount     int    `yaml:"threadCount"`
 }
-
 
 func LoadConfig(path string) (*Config, error) {
 	conf := &Config{}
