@@ -1,0 +1,7 @@
+spider:
+  urlListFile: /data/url.data
+  outputDirectory: /output
+  maxDepth: 1
+  crawlInterval: 1
+  crawlTimeout: 1
+  threadCount: 8

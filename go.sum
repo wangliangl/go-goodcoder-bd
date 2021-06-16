@@ -1,0 +1,9 @@
+github.com/jehiah/go-strftime v0.0.0-20171201141054-1d33003b3869 h1:IPJ3dvxmJ4uczJe5YQdrYB16oTJlGSC/OyZDqUk9xX4=
+github.com/jehiah/go-strftime v0.0.0-20171201141054-1d33003b3869/go.mod h1:cJ6Cj7dQo+O6GJNiMx+Pa94qKj+TG8ONdKHgMNIyyag=
+gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
+gopkg.in/yaml.v2 v2.4.0 h1:D8xgwECY7CYvx+Y2n4sBz93Jn9JRvxdiyyo8CTfuKaY=
+gopkg.in/yaml.v2 v2.4.0/go.mod h1:RDklbk79AGWmwhnvt/jBztapEOGDOx6ZbXqjP6csGnQ=
+icode.baidu.com/baidu/go-lib/log v0.0.0-20210315110400-a4034b575216 h1:Lye7ZeW+x8Fhq/2ql2FA3y9G2gMuKjYp8FJlO5Fv4GY=
+icode.baidu.com/baidu/go-lib/log v0.0.0-20210315110400-a4034b575216/go.mod h1:iLON49gSwVe3+5qvCXfoWRUrQQ1lNqI5nb6vyT4JbuE=
+icode.baidu.com/baidu/go-lib/web-monitor v0.0.0-20201119011918-79416fa689c0 h1:Qw07xvtJEwb/hOBKZXX4lYvSv2p7kGYZuLXgT2TxMaU=
+icode.baidu.com/baidu/go-lib/web-monitor v0.0.0-20201119011918-79416fa689c0/go.mod h1:rzqH6BXiGem6hY/VgOuZQ/Mm1YzzSLOVfGl+c1sh6nQ=
